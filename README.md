@@ -161,7 +161,23 @@ The endpoints were tested using Postman, including:
 - Validation of empty issue titles.
 - Handling of nonexistent issue IDs.
 
-Screenshots of the Postman tests can be added to this README after they are saved in the repository.
+### Postman Test Results
+
+#### 1. Create a Reporter — 201 Created
+
+![Reporter created successfully](screenshots/reporter-created.png)
+
+#### 2. Create an Issue — 201 Created
+
+![Issue created successfully](screenshots/issue-created.png)
+
+#### 3. Retrieve All Issues — 200 OK
+
+![Issues list retrieved successfully](screenshots/issues-list.png)
+
+#### 4. Validation Error — 400 Bad Request
+
+![Empty title validation error](screenshots/validation-error.png)
 
 ## Data Storage
 
