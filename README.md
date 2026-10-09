@@ -183,6 +183,9 @@ The endpoints were tested using Postman, including:
 
 This project uses `reporters.json` and `issues.json` for persistent data storage. The Django SQLite database file is not used as the primary store for these API records.
 
+## Design Decision
+
+I chose JSON files (`reporters.json` and `issues.json`) because the assignment requires separate JSON files for storing reporter and issue records. This keeps the project simple and makes it easy to understand how data is created, retrieved, and updated without using database models for these API records.
 ## Future Improvements
 
 - Replace JSON file storage with Django models and a relational database.
