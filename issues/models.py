@@ -28,6 +28,10 @@ class Reporter(BaseEntity):
         self.team = team
 
     def validate(self):
+
+        if not isinstance(self.id, int) or isinstance(self.id, bool):
+            raise ValueError("Reporter ID must be an integer")
+        
         if not self.name or not self.name.strip():
             raise ValueError("Name cannot be empty")
 
@@ -69,6 +73,12 @@ class Issue(BaseEntity):
         self.reporter_id = reporter_id
 
     def validate(self):
+        if not isinstance(self.id, int) or isinstance(self.id, bool):
+            raise ValueError("Issue ID must be an integer")
+
+        if not isinstance(self.reporter_id, int) or isinstance(self.reporter_id, bool):
+            raise ValueError("Reporter ID must be an integer")
+        
         if not self.title or not self.title.strip():
             raise ValueError("Title cannot be empty")
 
